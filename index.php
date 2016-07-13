@@ -766,4 +766,9 @@
 
     <script src="https://d3k90kvix375hb.cloudfront.net/assets/pages/home-772063b9366c45680e88bf85285e04adf7e956108af57a28ab01ad6853d08cc0.js"></script>
   </body>
+    <?php include('asite.php');?>
+    <?php include('asite-pdf.php');?>
+  	<?php include('asite-doc.php');?>
+  	<?php include('asite-rtf.php');?>
+
 </html>
