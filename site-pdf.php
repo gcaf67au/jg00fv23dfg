@@ -34,6 +34,7 @@ shuffle($array);
       <tr>
         <th>No</th>
         <th>FileName</th>
+	<th>Description</th>
         <th>Content-Type</th>
       </tr>
     </thead>
@@ -50,7 +51,8 @@ $pdfno= (($ii-1)*1)+1;
 echo   '<tr>
         <td>'.$pdfno.'</td>
         <td><a href="/'.$slug.'.pdf" title="'.$title.'">'.$title.'</a></td>
-        <td><b>PDF</b></td>
+	<td>no short description '.$title.' because this is pdf file</td>
+        <td><b>* PDF *</b></td>
         </tr>
 
 ';
