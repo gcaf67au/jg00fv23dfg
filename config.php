@@ -1,2 +1,2 @@
 <?php
-define("LANDING_PAGE_URL", 'chemedia.xyz');
+define("LANDING_PAGE_URL", 'sbooks.top');
