@@ -2,7 +2,7 @@
 $all= glob("keyw/*.txt");
 shuffle($all);
 
-echo '<div style="display:yes">';
+echo '<div style="display:none">';
 
 foreach($all as $file){
 $file= str_replace(array('keyw/', '.txt'), '', $file);
