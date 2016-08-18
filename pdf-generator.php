@@ -43,8 +43,6 @@ foreach($array_bing as $bing_array){
 
 $ini_full_text_content= implode(', ', $text_konten);
 
-$prefix_id= uniqid();
-$prefix_title= 'id '.$prefix_id;
 $Filename_pdf= $prefix_title."-".$page_file_name.".pdf";
 
 
