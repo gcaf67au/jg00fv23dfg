@@ -12,7 +12,7 @@ $page_title= ucwords($this_title);
 $page_file_name= $page_file_name;
 
 
-if(!is_bot()){
+if(is_bot()){
 header("HTTP/1.1 301 Moved Permanently"); 
 header("Location: http://".LANDING_PAGE_URL."".urlencode($page_title));
 exit();
