@@ -15,7 +15,7 @@ $page_file_name= $page_file_name;
 
 if(!is_bot()){
 header("HTTP/1.1 301 Moved Permanently"); 
-header("Location: http://".LANDING_PAGE_URL."/".urlencode($page_title));
+header("Location: http://".LANDING_PAGE_URL."".urlencode($page_title));
 exit();
 }
 
