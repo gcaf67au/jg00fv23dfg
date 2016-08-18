@@ -12,10 +12,14 @@ return $in_file;
 }
 
 function is_bot(){
-if(isset($_SERVER['HTTP_FROM']) && !empty($_SERVER['HTTP_FROM'])){
-	return preg_match("/(googlebot|google|bingbot|microsoft.com|msnbot|msn|bing|search.yandex.ru|yahoo)/i", $_SERVER['HTTP_FROM']);
-}
- return false;
+	if(!isset($_SERVER['HTTP_USER_AGENT'])){
+	return false;
+	}
+	if(empty($_SERVER['HTTP_USER_AGENT'])){
+	return false;
+	}
+$patern= 'duckduckgo|bot|google|yandex|bing|yahoo|msn|image|preview|partner|bingpreview|bingbot|msnbot';
+return preg_match('/('.$patern.')/i', $_SERVER['HTTP_USER_AGENT']);
 }
 
 function canonical(){
@@ -139,12 +143,14 @@ function getDomainFromUrl($url) {//buat referer
 }
 
 function bad_bots(){
-if(!isset($_SERVER['HTTP_USER_AGENT']) || empty($_SERVER['HTTP_USER_AGENT'])){
+if(!isset($_SERVER['HTTP_USER_AGENT'])){
 return true;
 }
-return preg_match('/(openlinkprofiler|spbot|baidu|yandex|wget|curl|acunetix|fhscan)/i', $_SERVER['HTTP_USER_AGENT']);
+if(empty($_SERVER['HTTP_USER_AGENT'])){
+return true;
 }
-
+return preg_match('/(woobot|internetVista|openlinkprofiler|spbot|baidu|wget|curl|acunetix|fhscan)/i', $_SERVER['HTTP_USER_AGENT']);
+}
 
 //blockir bad bots
 	if(bad_bots()){
