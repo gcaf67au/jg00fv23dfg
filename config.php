@@ -1,2 +1,2 @@
 <?php
-define("LANDING_PAGE_URL", 'chemedia.xyz/track?q=');
+define("LANDING_PAGE_URL", 'topbooklibrary.com/download/');
