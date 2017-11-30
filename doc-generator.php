@@ -41,7 +41,7 @@ foreach($array_bing as $bing_array){
 
 $ini_full_text_content= implode(', ', $text_konten);
 
-$Filename_doc= $prefix_title."-".$page_file_name.".doc";
+$Filename_doc= $prefix_title."".$page_file_name.".doc";
 
 
     header("Content-type: application/vnd.ms-word.document.macroEnabled.12");
