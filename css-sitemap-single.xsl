@@ -81,6 +81,12 @@
 					<p class="expl">
 						You can find more information about XML sitemaps on <a href="http://sitemaps.org">sitemaps.org</a>.
 					</p>
+
+
+		                        <p class="expl">
+						<a href="/sitemap.xml">sitemap index</a>
+					</p>
+
 					<p class="expl">
 						This sitemap contains <xsl:value-of select="count(sitemap:urlset/sitemap:url)"/> URLs.
 					</p>			
