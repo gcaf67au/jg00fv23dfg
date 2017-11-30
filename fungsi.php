@@ -1,5 +1,5 @@
 <?php
-date_default_timezone_set('Africa/Lagos');
+date_default_timezone_set('America/Chicago');
 include('config.php');
 
 function random_keyword(){
